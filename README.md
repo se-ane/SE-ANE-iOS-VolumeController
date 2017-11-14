@@ -13,7 +13,7 @@ ActionScript không có khả năng truy cập sâu vào các API trong iOS/Andr
 
 ## What you need
 
-* Phiên bản Xcode hoàn chỉnh (kể cả không dùng Xcode như IDE chính, chúng ta vẫn cần Build Tools và Compiler kèm theo Xcode).
+* Xcode (kể cả không dùng Xcode như IDE chính, chúng ta vẫn cần Build Tools và Compiler kèm theo Xcode), trong trường hợp này, phiên bản Xcode 8.3 được khuyến khích.
 * [Adobe AIR SDK](http://www.adobe.com/devnet/air/air-sdk-download.html) for MacOSX.
 * Optional: AppCode
 
