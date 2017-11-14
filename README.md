@@ -19,7 +19,7 @@ ActionScript không có khả năng truy cập sâu vào các API trong iOS/Andr
 
 ## Notice
 
-Apple đã ngừng phát triển cũng như lên kế hoạch ngừng hỗ trợ Objective-C trong việc xây dựng các ứng dụng trên MacOS và iOS. Adobe chưa có động thái gì trong việc hỗ trợ Swift (tại thời điểm viết, Swift đã có phiên bản ổn định Swift 4). Cộng đồng GitHub cũng đang phát triển một phương pháp thay thế, có thể thấy tại [repo này](https://github.com/tuarua/Swift-IOS-ANE), với bản chất là phần lớn các method được viết bằng Swift 3, và xây dựng một interface bằng Objective-C.
+Apple đã ngừng phát triển cũng như lên kế hoạch ngừng hỗ trợ Objective-C trong việc xây dựng các ứng dụng trên MacOS và iOS. Adobe chưa có động thái gì trong việc hỗ trợ Swift (tại thời điểm viết, Swift đã có phiên bản ổn định Swift 4). Cộng đồng GitHub cũng đang phát triển một phương pháp thay thế, có thể thấy tại [repo này](https://github.com/tuarua/Swift-IOS-ANE), với bản chất là phần lớn các method được viết bằng Swift 3 (yêu cầu Xcode 8.3), và xây dựng một interface bằng Objective-C.
 
 Chưa rõ khả năng phát triển ANE trên Android bằng ngôn ngữ Kotlin, nhưng, do phần lớn Kotlin được thiết kế để tương thích tối đa với hệ sinh thái Java (với Scala, điều này không dễ dàng), việc phát triển ANE bằng Kotlin thay Java là điều nên được khuyến khích.
 
