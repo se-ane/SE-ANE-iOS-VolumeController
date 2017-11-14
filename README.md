@@ -30,5 +30,7 @@ Chưa rõ khả năng phát triển ANE trên Android bằng ngôn ngữ Kotlin,
 ## Contributors
 
 @NganNTK as Tech Leader/Android Developer
+
 @LaNT as AS3 Developer
+
 @ThanhPV as iOS Developer
