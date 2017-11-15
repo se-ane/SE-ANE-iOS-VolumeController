@@ -15,7 +15,7 @@ Các ANE được xây dựng bằng:
 
 ## Những gì bạn cần:
 
-* Xcode 8.3 (do project đang hướng đến việc sử dụng Swift 3.0 với ANE, nên chúng ta không sử dụng Xcode 9 trở lên, do đã chuyển sang Swift 4).
+* Xcode 8.3.
 * [Adobe AIR SDK](http://www.adobe.com/devnet/air/air-sdk-download.html) for MacOSX.
 * Optional: AppCode
 
@@ -27,7 +27,7 @@ Các ANE được xây dựng bằng:
 
 ## Wiki
 
-// TODO
+[Wiki](/wiki/ANE-iOS-VolumeController.md)
 
 ## Contributors
 
