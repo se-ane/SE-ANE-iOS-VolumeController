@@ -27,8 +27,10 @@ Các ANE được xây dựng bằng:
 >Cộng đồng GitHub cũng đang phát triển một phương pháp thay thế, có thể thấy tại [repo này](https://github.com/tuarua/Swift-IOS-ANE), với bản chất là phần lớn các method được viết bằng Swift 3, và xây dựng một interface bằng Objective-C.
 
 ## Wiki
-[iOS-ANE-VolumeController](./wiki/ANE-iOS-VolumeController.md)
-[SE-ANE-VolumeController](https://github.com/se-ane/SE-AIRNativeExtension/wiki)
+
+* [iOS-ANE-VolumeController](./wiki/ANE-iOS-VolumeController.md)
+
+* [SE-ANE-VolumeController](https://github.com/se-ane/SE-AIRNativeExtension/wiki)
 
 
 ## Contributors
