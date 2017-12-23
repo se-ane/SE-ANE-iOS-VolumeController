@@ -16,7 +16,9 @@
 @implementation ANE_VolumeController
 
 FREContext eventContext;
-
+/**
+ * Lấy ra giá trị Volume của điện thoại bằng cách truy cập vào thông số của giao diện Volume Slider
+ */
 float getVolumeLevel() {
     MPVolumeView *slide = [MPVolumeView new];
     UISlider *volumeViewSlider;
@@ -56,13 +58,13 @@ void volumeListenerCallback(void *inClientData, AudioSessionPropertyID inID, UIn
 FREObject init(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]){
     eventContext = ctx;
 
-    // Listen to changes to system volume
+    // Lắng nghe sự thay đổi của giá trị Volume của hệ thống
 
     AudioSessionInitialize(NULL, NULL, NULL, NULL);
     AudioSessionSetActive(YES);
     AudioSessionAddPropertyListener(kAudioSessionProperty_CurrentHardwareOutputVolume, volumeListenerCallback, NULL);
 
-    // Go ahead and send back current system volume
+    // Tiếp tục và gửi lại giá trị Volume của hệ thống
 
     float curVolume = getVolumeLevel();
     dispathVolumeEvent(curVolume);
@@ -80,14 +82,38 @@ FREObject setVolume(FREContext ctx, void* funcData, uint32_t argc, FREObject arg
     return NULL;
 }
 
+/**
+ * Mặc dù chúng ta đã có hàm lấy giá trị Volume hiện tại của hệ thống.
+ * Tuy nhiên, với kiểu trả về là một primitive value, không thể tương thích với AS3 ANE.
+ * FREObject là AS3 Object trên C.
+ * Do đó, @getCurrentVolume chỉ mang tính chất chuyển đổi từ primitive value sang FREObject.
+ * @return Double-FREObject.
+ */
+FREObject getCurrentVolume(FREContext ctx, void* funcData, uint32_t argc, FREObject argv[]) {
+    float curVolume = getVolumeLevel();
+    
+    FREObject volumeLevelAsFREObj;
+    FRENewObjectFromDouble((double) curVolume, &volumeLevelAsFREObj);
+    
+    return volumeLevelAsFREObj;
+}
+
 void VolExtContextInitializer(void* extData
                               , const uint8_t* ctxType
                               , FREContext ctx
                               , uint32_t* numFunctionsToTest
                               , const FRENamedFunction** functionsToSet){
-    *numFunctionsToTest = 2;
+    *numFunctionsToTest = 3;
 
     FRENamedFunction* func = (FRENamedFunction*) malloc(sizeof(FRENamedFunction) * *numFunctionsToTest);
+    
+    /**
+    * Để phần thư viện iOS này có thể giao tiếp với interface viết bằng AS3,
+    * lưu ý rằng, phải khai báo trên một FRENamedFunction.
+    * Mỗi một FRENamedFunction chứa 2 giá trị cần lưu ý.
+    * @name là tên của hàm sẽ được sử dụng trong AS3 interface.
+    * @function là con trỏ vào hàm tương ứng trên Objective-C.
+    */
 
     func[0].name = (const uint8_t*) "init";
     func[0].functionData = NULL;
@@ -96,6 +122,10 @@ void VolExtContextInitializer(void* extData
     func[1].name = (const uint8_t*) "setVolume";
     func[1].functionData = NULL;
     func[1].function = &setVolume;
+    
+    func[2].name = (const uint8_t*) "getCurrentVolume";
+    func[2].functionData = NULL;
+    func[2].function = &getCurrentVolume;
 
     *functionsToSet = func;
 }
