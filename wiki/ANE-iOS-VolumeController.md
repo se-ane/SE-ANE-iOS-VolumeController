@@ -17,8 +17,8 @@ Architectures: armv7
 ## Developments
 
 Các AS3 Object được thể hiện trong Objective-C bằng **FREObject**. Do đó I/O của thư viện đến AS3 Lib cần phải thông qua 2 giá trị. Xem thêm tại [Transferring data with AIR Native Extensions for iOS](http://www.adobe.com/devnet/air/articles/transferring-data-ane-ios-pt1.html).
-* **FREContext**
-* **FREObject**
+* [**FREContext**](https://help.adobe.com/en_US/air/extensions/WSb464b1207c184b14-2c95362d12937e5c13e-7fff.html)
+* [**FREObject**](https://help.adobe.com/en_US/air/extensions/WSb464b1207c184b14-2c95362d12937e5c13e-7ffe.html)
 
 Các hàm được export cần phải khai báo trong mảng FRENamedFunction của hàm ContextInitializer.
 
