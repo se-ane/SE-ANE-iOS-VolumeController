@@ -2,9 +2,15 @@
 
 ## Thiết lập môi trường
 
-Trước khi tiến hành, chúng ta cần đảm bảo đã cài đặt:
+Yêu cầu:
 
-* Xcode 8.3
-* Adobe AIR SDK
+* Xcode 8.3 trở lên.
+* Adobe AIR SDK.
 
->Notice: Yêu cầu chính xác phiên bản Xcode 8.3, các phiên bản Xcode 9.0 trở lên sẽ gặp vấn đề do ANE không thể build dựa trên Swift 4.0.
+[Latest build: Release 1.0 2017-12-24](https://github.com/se-ane/SE-ANE-iOS-VolumeController/tree/master/release)
+
+## Build from source
+Sử dụng Xcode để build. Apple không hỗ trợ compile Objective-C Cocoa Touch Libraries trên Windows hay Linux.
+Architectures: armv7
+
+## API
