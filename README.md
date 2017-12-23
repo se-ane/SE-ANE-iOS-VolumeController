@@ -28,10 +28,13 @@ Các ANE được xây dựng bằng:
 
 ## Wiki
 
-* [iOS-ANE-VolumeController](./wiki/ANE-iOS-VolumeController.md)
+* [iOS-ANE-VolumeController](./wiki/ANE-iOS-VolumeController.md).
 
-* [SE-ANE-VolumeController](https://github.com/se-ane/SE-AIRNativeExtension/wiki)
+* [SE-ANE-VolumeController](https://github.com/se-ane/SE-AIRNativeExtension/wiki).
 
+# TODO
+
+* Remove/Replace deprecated function and libraries.
 
 ## Contributors
 
