@@ -12,7 +12,8 @@ Yêu cầu:
 ## Build from source
 
 Sử dụng Xcode để build. Apple không hỗ trợ compile Objective-C Cocoa Touch Libraries trên Windows hay Linux.
-Architectures: armv7
+Architectures: arm64, armv7
+Build Active Architectures Only: **No**
 
 ## Developments
 

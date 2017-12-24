@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5E1FE8DA1FB9EF42008F3F79 /* ANE_VolumeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E1FE8D91FB9EF42008F3F79 /* ANE_VolumeController.m */; };
-		5E1FE8DB1FB9EF42008F3F79 /* ANE_VolumeController.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5E1FE8D81FB9EF42008F3F79 /* ANE_VolumeController.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -18,7 +17,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				5E1FE8DB1FB9EF42008F3F79 /* ANE_VolumeController.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -26,7 +24,6 @@
 
 /* Begin PBXFileReference section */
 		5E1FE8D51FB9EF42008F3F79 /* libANE-VolumeController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libANE-VolumeController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5E1FE8D81FB9EF42008F3F79 /* ANE_VolumeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ANE_VolumeController.h; sourceTree = "<group>"; };
 		5E1FE8D91FB9EF42008F3F79 /* ANE_VolumeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ANE_VolumeController.m; sourceTree = "<group>"; };
 		5E1FE8E61FB9F48E008F3F79 /* FlashRuntimeExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlashRuntimeExtensions.h; sourceTree = "<group>"; };
 		AF555FB20548823923ACA4E6 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = file.gitignore; path = .gitignore; sourceTree = "<group>"; };
@@ -64,7 +61,6 @@
 			isa = PBXGroup;
 			children = (
 				5E1FE8E61FB9F48E008F3F79 /* FlashRuntimeExtensions.h */,
-				5E1FE8D81FB9EF42008F3F79 /* ANE_VolumeController.h */,
 				5E1FE8D91FB9EF42008F3F79 /* ANE_VolumeController.m */,
 			);
 			path = "ANE-VolumeController";
@@ -140,8 +136,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -195,8 +191,8 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "compiler-default";
+				CLANG_CXX_LIBRARY = "compiler-default";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
@@ -243,6 +239,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3YJ33TB87;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -255,7 +252,7 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3YJ33TB87;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
