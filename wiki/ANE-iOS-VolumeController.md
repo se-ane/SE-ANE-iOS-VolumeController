@@ -12,8 +12,20 @@ Yêu cầu:
 ## Build from source
 
 Sử dụng Xcode để build. Apple không hỗ trợ compile Objective-C Cocoa Touch Libraries trên Windows hay Linux.
+
 Architectures: arm64, armv7
+
 Build Active Architectures Only: **No**
+
+Nếu khi build ANE gặp một trong các lỗi sau:
+
+>Error: Apple App Store allows only universal applications. "libIOSVolumeLib.a" is not a universal binary. Please change build settings in Xcode project to "Standard Architecture" to create universal library/framework.
+
+>[exec] Error: libVolumeLibiOS.a are required to have universal iOS libraries. Please contact the ANE developer(s) to get the same.
+
+Do năm 2015, Apple yêu cầu toàn bộ các ứng dụng trên App Store phải support arm64. Nếu gặp lỗi trên, xin hãy đảm bảo 2 thông số trên trong Build Options là chính xác.
+
+Tham khảo thêm tại [64-bit requirements for iOS apps](http://easynativeextensions.com/making-your-ios-apps-universal/).
 
 ## Developments
 
